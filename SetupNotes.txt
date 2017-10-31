@@ -1,0 +1,19 @@
+#Solution and Project
+
+dotnet new sln
+mkdir src
+cd src
+mkdir FootballScores.Api
+cd FootballScores.Api
+dotnet new webapi
+cd ../../
+dotnet sln FootballScores.sln add src/FootballScores.Api/FootballScores.Api.csproj
+
+#Microsoft.AspNetCore.Mvc.Versioning
+dotnet add package Microsoft.AspNetCore.Mvc.Versioning --version 2.0.0
+
+#EntityFramework
+dotnet add package Npgsql.EntityFrameworkCore --version 2.0.0
+
+Run Add-Migration InitialCreate in package manager console
+Run Update-Database in nuget package manager console
